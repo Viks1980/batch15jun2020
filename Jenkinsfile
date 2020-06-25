@@ -29,7 +29,7 @@ pipeline {
 stage('Deploy') {
          steps {
              echo "Deployment"
-            sh 'sudo cp /var/lib/jenkins/workspace/addressbook/target/addressbook.war /usr/share/tomcat/webapps'
+            sh 'sudo cp /var/lib/jenkins/workspace/pipeline project/target/addressbook.war /usr/share/tomcat/webapps'
             sh 'sudo systemctl restart tomcat'
          }
       }
